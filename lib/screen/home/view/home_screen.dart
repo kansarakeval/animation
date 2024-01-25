@@ -23,13 +23,18 @@ class _HomeScreenState extends State<HomeScreen> {
         appBar: AppBar(
           title: const Text("Animation"),
           centerTitle: true,
+          actions: [
+            IconButton(onPressed: () {
+              Navigator.pushNamed(context, 'twin');
+            }, icon: Icon(Icons.arrow_forward))
+          ],
         ),
         body: InkWell(
           onTap: () {
             providerr!.changImage(!providerr!.isColor);
           },
           child: AnimatedAlign(
-            duration: Duration(seconds: 3),
+            duration: const Duration(seconds: 3),
             alignment: providerw!.isColor?Alignment.topCenter:Alignment.bottomCenter,
             child: AnimatedContainer(
               duration: Duration(seconds: 3),
