@@ -11,6 +11,7 @@ void main() {
     child: MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(useMaterial3: true),
+      initialRoute: 'anim',
       routes: app_Routes,
     ),
   ));
